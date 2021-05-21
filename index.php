@@ -1,3 +1,6 @@
+<?php
+require_once "server.php"; ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,7 +31,7 @@
                             </div>
                             <div class="input-row">
                                 <label for="password">Password</label>
-                                <input type="text" name="password">
+                                <input type="password" name="password">
                             </div>
                             <button type="submit" class="btn-submit"> > </button>
                         </div>
@@ -38,6 +41,10 @@
         </div>
     </section>
 
+
+
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

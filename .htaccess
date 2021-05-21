@@ -1,0 +1,3 @@
+RewriteEngine On
+#RewriteRule ^index.php server.php [R=301]
+Redirect 301 /stage.loc /stage.loc/login.php
