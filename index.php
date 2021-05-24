@@ -1,5 +1,14 @@
 <?php
-require_once "server.php";
+
+//error_reporting(-1);
+//ini_set('display_errors', 'On');
+
+use dbConnect\dbConnect;
+
+require_once "functions.php";
+require_once "classes/dbConnect.php";
+
+
 ?>
 
 <!doctype html>

@@ -1,6 +1,7 @@
 <?php
 
-require_once "server.php";
+
+
 
 $errors = [];
 $name = '';
@@ -14,4 +15,3 @@ if ($_POST['name'] && $_POST['email'] && $_POST['password']) {
 } else {
     echo 'Post is not worked';
 }
-
