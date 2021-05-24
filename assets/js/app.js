@@ -3,25 +3,20 @@ $(document).ready(function () {
     $('.form__item').submit(function (e) {
         e.preventDefault();
 
-        console.log('submit')
+        var data = $(this).serialize(),
+            url = window.location.href + 'functions.php';
 
-        // var data = {
-        //     'action': 'dashboard_add_user',
-        //     'name' : $('.form__item input[type=text]').val(),
-        //     'password' : $('.form__item input[type=password]').val(),
-        // };
-        //
-        // $.ajax({
-        //     type: "POST",
-        //     url: ajaxurl,
-        //     data: data
-        // })
-        //     .done(function(response) {
-        //         console.log(response);
-        //     })
-        //     .fail(function() {
-        //         $('#dash-cf .dash-cf-unsuccess').css({display:'block'});
-        //     });
+        $.ajax({
+            type: 'post',
+            url: url,
+            data: data
+        })
+            .done(function(response) {
+                alert(response);
+            })
+            .fail(function() {
+                console.log('response error submit');
+            });
     });
 
 });

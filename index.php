@@ -1,5 +1,6 @@
 <?php
-require_once "server.php"; ?>
+require_once "server.php";
+?>
 
 <!doctype html>
 <html lang="en">
@@ -22,12 +23,16 @@ require_once "server.php"; ?>
                     <div class="border__image">
                         <img src="<?php echo '/assets/img/wood_border.png' ?>" alt="border">
                     </div>
-                    <form action="index.php" method="post" class="form__item">
+                    <form action="ajax.php" method="post" class="form__item">
                         <h2 class="form__title">Pixels Daily</h2>
                         <div class="form__body">
                             <div class="input-row">
-                                <label for="username">Username</label>
-                                <input type="text" name="username">
+                                <label for="name">Username</label>
+                                <input type="text" name="name">
+                            </div>
+                            <div class="input-row">
+                                <label for="email">Email</label>
+                                <input type="email" name="email">
                             </div>
                             <div class="input-row">
                                 <label for="password">Password</label>
