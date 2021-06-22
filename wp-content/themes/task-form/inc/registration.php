@@ -52,7 +52,7 @@ function form_register()
                 $message = __('You are have been register', 'stage');
                 $status = 200;
 
-                echo "<script type='text/javascript'>window.location.href='". home_url() ."'</script>";
+                echo "<script type='text/javascript'>window.location.href='". home_url() ."' + '/wp-admin'</script>";
                 exit();
             } else {
                 $message = __('Something wrong ', 'stage');
