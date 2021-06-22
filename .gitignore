@@ -1,2 +1,4 @@
-node_modules/
-package-lock.json/
+/wp-content/themes/task-form/dev/node_modules/
+/wp-content/themes/task-form/dev/package-lock.json/
+/wp-content/themes/task-form/assets/img/
+/wp-content/themes/task-form/assets/fonts/
