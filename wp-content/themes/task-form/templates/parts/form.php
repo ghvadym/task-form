@@ -1,5 +1,3 @@
-<?php echo get_header() ?>
-
 <section class="form">
     <div class="container">
         <div class="form__wrap" style="background-image: url(<?php echo get_template_directory_uri() . '/assets/img/background.png'; ?>)">
@@ -8,26 +6,22 @@
                     <img class="border__image-head" src="<?php echo get_template_directory_uri() . '/assets/img/rawlplug.png'; ?>" alt="border image head">
                     <div class="form__item">
 
-                        <form action="functions.php" method="post" class="">
+                        <form action="index.php" method="post" class="<?php echo is_page('register') ? 'form__register' : 'form__login'; ?>">
                             <h2 class="form__title">Pixels Daily</h2>
-
-<!--                            --><?php // if (count($errors) > 0) : ?>
-<!--                                <div class="error">-->
-<!--                                    --><?php //foreach ($errors as $error) : ?>
-<!--                                        <p>--><?php //echo $error ?><!--</p>-->
-<!--                                    --><?php //endforeach ?>
-<!--                                </div>-->
-<!--                            --><?php // endif ?>
-
+                            <div class="form__errors"></div>
                             <div class="form__body">
                                 <div class="input-row">
                                     <label for="name">Username</label>
                                     <input type="text" name="name">
                                 </div>
-                                <div class="input-row">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email">
-                                </div>
+
+                                <?php if ( is_page('register') ): ?>
+                                    <div class="input-row">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="email">
+                                    </div>
+                                <?php endif; ?>
+
                                 <div class="input-row">
                                     <label for="password">Password</label>
                                     <input type="password" name="password">
@@ -42,5 +36,3 @@
         </div>
     </div>
 </section>
-
-<?php echo get_footer() ?>

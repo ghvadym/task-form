@@ -1,9 +1,9 @@
-<?php echo get_header() ?>
-
 <?php
+
+echo get_header();
+
 wp_nav_menu(array(
     'theme_location' => 'main_header'
 ));
-?>
 
-<?php echo get_footer() ?>
+echo get_footer();
