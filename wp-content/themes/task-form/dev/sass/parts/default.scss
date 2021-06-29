@@ -6,9 +6,9 @@ body {
   font-family: $font-family, 'Arial', san-serif;
   font-size:16px;
   color: $font-color;
-  line-height: normal;
   min-height: 100vh;
-  background-color: $body-color;
+  background-color: #adadad;
+  margin: 0;
   @include flexColumnCenter;
 }
 
@@ -17,9 +17,13 @@ h2 {
   text-align: center;
 }
 
-input:focus {outline: none}
+input:focus {
+  outline: none
+}
 
-a, button {cursor: pointer}
+a, button {
+  cursor: pointer
+}
 
 .btn-submit {
   display: inline-block;
@@ -30,11 +34,6 @@ a, button {cursor: pointer}
   font-size: 1.5rem;
   color: #e4e4e4;
   border: 2px solid #e4e4e4;
-}
-
-section {
-  display: block;
-  width: 100%;
 }
 
 .container {
