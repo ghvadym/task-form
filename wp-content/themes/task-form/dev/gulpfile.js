@@ -10,7 +10,7 @@ const px2rem = require('gulp-px2rem');
 
 
 gulp.task("css", function () {
-    return gulp.src("sass/app.scss")
+    return gulp.src("../assets/scss/app.scss")
         .pipe(plumber())
         .pipe(sass())
         .pipe(autoprefixer({
@@ -30,7 +30,7 @@ gulp.task("refresh", function (done) {
 
 gulp.task("server", function () {
     server.init({
-        proxy: 'task-form/',
+        proxy: 'stage.loc/',
         open: true,
         cors: true,
         ui: false,
@@ -44,7 +44,7 @@ gulp.task("server", function () {
         }
     });
 
-    gulp.watch("sass/**/*.scss", gulp.series("css", "refresh"));
+    gulp.watch("../assets/scss/**/*.scss", gulp.series("css", "refresh"));
 });
 
 

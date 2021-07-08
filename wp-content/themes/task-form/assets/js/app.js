@@ -12,7 +12,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'post',
-            url: MyAjax.ajaxurl,
+            url: my-ajax.ajaxurl,
             data: data,
         })
             .done(function(response) {
@@ -37,7 +37,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: 'post',
-            url: MyAjax.ajaxurl,
+            url: my-ajax.ajaxurl,
             data: data,
         })
             .done(function(response) {
